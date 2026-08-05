@@ -1,310 +1,355 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>China Tour Package | Beijing • Shanghai</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<title>China Tour Package</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:'Noto Sans',sans-serif;
-    background:#f6f0e7;
-    color:#2c2c2c;
-    line-height:1.6;
+
+font-family:Poppins,sans-serif;
+background:#fff6ef;
+color:#333;
+line-height:1.6;
+
 }
 
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-    radial-gradient(circle at top left,#d6282815 0%,transparent 40%),
-    radial-gradient(circle at bottom right,#d6282815 0%,transparent 35%);
-    pointer-events:none;
-}
+/* Decorative Background */
 
-.container{
-    width:1200px;
-    max-width:95%;
-    margin:auto;
-    padding:40px 0 80px;
+body:before{
+content:"";
+position:fixed;
+inset:0;
+background:
+
+radial-gradient(circle at top left,#ffd54f22,transparent 40%),
+radial-gradient(circle at bottom right,#b71c1c22,transparent 40%);
+
+pointer-events:none;
+z-index:-1;
 }
 
 /* HERO */
 
 .hero{
-    background:linear-gradient(135deg,#9d0208,#6a040f);
-    color:white;
-    border-radius:20px;
-    overflow:hidden;
-    position:relative;
-    padding:70px;
-    box-shadow:0 20px 50px rgba(0,0,0,.25);
-}
 
-.hero:before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background-image:
-    radial-gradient(circle,#ffffff15 1px,transparent 1px);
-    background-size:18px 18px;
-    opacity:.4;
+background:
+linear-gradient(rgba(140,0,0,.82),rgba(80,0,0,.90)),
+url("https://images.unsplash.com/photo-1547981609-4b6bf67db7a0?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
+padding:70px 20px;
+text-align:center;
+color:white;
+position:relative;
+overflow:hidden;
+
 }
 
 .hero h1{
-    position:relative;
-    font-family:'Cinzel',serif;
-    font-size:58px;
-    letter-spacing:4px;
+
+font-family:Cinzel,serif;
+font-size:58px;
+color:#FFD54F;
+text-shadow:4px 4px 10px #000;
+letter-spacing:3px;
+
 }
 
 .hero h2{
-    position:relative;
-    font-size:26px;
-    margin-top:8px;
-    font-weight:300;
+
+font-size:28px;
+margin-top:10px;
+
 }
 
-.tag{
-    position:relative;
-    display:inline-block;
-    margin-top:18px;
-    padding:10px 22px;
-    background:#d4af37;
-    color:#5b0000;
-    border-radius:40px;
-    font-weight:bold;
+.hero p{
+
+margin-top:10px;
+font-size:20px;
+
 }
 
-.price{
-    position:relative;
-    margin-top:25px;
-    font-size:42px;
-    font-weight:bold;
+.dragon{
+
+font-size:90px;
+display:block;
+margin-bottom:10px;
+animation:float 4s infinite ease-in-out;
+
 }
 
-.travel{
-    position:relative;
-    margin-top:12px;
-    font-size:20px;
-    opacity:.9;
+@keyframes float{
+
+50%{
+transform:translateY(-10px);
 }
 
-/* SECTION */
-
-.section{
-    margin-top:40px;
 }
 
-.title{
-    text-align:center;
-    color:#8b0000;
-    font-size:34px;
-    font-family:'Cinzel',serif;
-    margin-bottom:25px;
-}
+/* Sections */
 
-/* cards */
+.container{
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+max-width:1300px;
+margin:auto;
+padding:40px 20px;
+
 }
 
 .card{
-    background:white;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    border-top:6px solid #b22222;
+
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+margin-bottom:35px;
+
 }
 
-.card h3{
-    color:#8b0000;
-    margin-bottom:15px;
+.section-title{
+
+font-size:34px;
+color:#9b0000;
+margin-bottom:25px;
+font-weight:bold;
+border-left:8px solid gold;
+padding-left:15px;
+
 }
 
-.card ul{
-    padding-left:18px;
+/* Flight */
+
+.flight{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+
 }
 
-.card li{
-    margin:8px 0;
+.flight-box{
+
+background:linear-gradient(135deg,#9b0000,#d32f2f);
+color:white;
+padding:25px;
+border-radius:18px;
+
 }
 
-/* itinerary */
+.flight-box h3{
+
+color:#FFD54F;
+margin-bottom:15px;
+
+}
+
+/* Rate */
+
+.rate{
+
+background:#FFD54F;
+padding:25px;
+text-align:center;
+border-radius:20px;
+font-size:28px;
+font-weight:bold;
+color:#7a0000;
+margin:30px 0;
+
+}
+
+/* Lists */
+
+.grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+li{
+
+padding:8px 0;
+border-bottom:1px dashed #ddd;
+
+}
+
+/* Timeline */
 
 .timeline{
-    position:relative;
-    margin-top:30px;
-}
 
-.timeline::before{
-    content:"";
-    position:absolute;
-    left:25px;
-    top:0;
-    bottom:0;
-    width:4px;
-    background:#c1121f;
+position:relative;
+margin-left:20px;
+padding-left:30px;
+border-left:5px solid #c62828;
+
 }
 
 .day{
-    position:relative;
-    margin-left:70px;
-    margin-bottom:35px;
-    background:white;
-    border-radius:18px;
-    padding:28px;
-    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+position:relative;
+margin-bottom:40px;
+
 }
 
-.day::before{
-    content:"";
-    width:18px;
-    height:18px;
-    background:#d4af37;
-    border:5px solid #b22222;
-    border-radius:50%;
-    position:absolute;
-    left:-55px;
-    top:35px;
+.day:before{
+
+content:"";
+position:absolute;
+left:-43px;
+top:10px;
+
+width:20px;
+height:20px;
+background:#FFD54F;
+border:4px solid #b71c1c;
+border-radius:50%;
+
 }
 
-.day h3{
-    color:#8b0000;
-    margin-bottom:10px;
+.day-card{
+
+background:white;
+border-radius:18px;
+padding:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
 }
 
-.day small{
-    display:inline-block;
-    margin-bottom:15px;
-    background:#f8e7b4;
-    color:#7a0000;
-    padding:5px 12px;
-    border-radius:30px;
-    font-weight:600;
+.day-card h3{
+
+color:#b71c1c;
+font-size:28px;
+margin-bottom:10px;
+
 }
 
-.day ul{
-    padding-left:18px;
+.badge{
+
+display:inline-block;
+padding:6px 14px;
+border-radius:30px;
+background:#c62828;
+color:white;
+font-size:13px;
+margin-bottom:15px;
+
 }
 
-.day li{
-    margin:8px 0;
+.optional{
+
+background:#fff8dc;
+border-left:5px solid orange;
+padding:15px;
+margin-top:15px;
+border-radius:10px;
+
 }
-
-/* flight */
-
-.flight{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.flightBox{
-    flex:1;
-    min-width:300px;
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    border-left:8px solid #b22222;
-}
-
-.flightBox h3{
-    color:#8b0000;
-    margin-bottom:15px;
-}
-
-/* footer */
 
 .footer{
-    margin-top:50px;
-    background:#7f1d1d;
-    color:white;
-    text-align:center;
-    padding:25px;
-    border-radius:18px;
+
+text-align:center;
+padding:40px;
+background:#9b0000;
+color:white;
+font-size:20px;
+
 }
 
-.highlight{
-    color:#d4af37;
-    font-weight:bold;
+.footer strong{
+
+color:#FFD54F;
+
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-.hero{
-padding:35px;
+.flight,.grid{
+
+grid-template-columns:1fr;
+
 }
 
 .hero h1{
-font-size:38px;
-}
 
-.hero h2{
-font-size:20px;
-}
+font-size:40px;
 
-.price{
-font-size:30px;
 }
 
 }
+
 </style>
 
 </head>
 
 <body>
 
+<header class="hero">
+
+<div class="dragon">🐉</div>
+
+<h1>CHINA TOUR PACKAGE</h1>
+
+<h2>🇨🇳 Beijing • Shanghai 🇨🇳</h2>
+
+<p><strong>6 Days • 5 Nights</strong></p>
+
+<p>NO MANDATORY SHOPPING</p>
+
+<p>✈️ via Philippine Airlines ✈️</p>
+
+</header>
+
 <div class="container">
 
-<div class="hero">
+<div class="rate">
 
-<h1>🇨🇳 CHINA TOUR PACKAGE</h1>
+💰 ₱65,998 per person<br>
 
-<h2>Beijing • Shanghai<br>6 Days • 5 Nights</h2>
-
-<div class="tag">NO MANDATORY SHOPPING • ✈ PAL AIRLINES</div>
-
-<div class="price">₱65,998 / Person</div>
-
-<div class="travel">Travel Date: <strong>December 2026</strong></div>
+Travel Date: <strong>December 2026</strong>
 
 </div>
 
-<div class="section">
+<div class="card">
 
-<h2 class="title">✈ Flight Schedule</h2>
+<h2 class="section-title">✈ Flight Details</h2>
 
 <div class="flight">
 
-<div class="flightBox">
+<div class="flight-box">
+
 <h3>Outbound</h3>
 
 <p><strong>PR358</strong></p>
 
 <p>Manila → Beijing</p>
 
-<p><strong>06:55 AM</strong></p>
-
-<p>Arrival <strong>11:55 AM</strong></p>
+<p>06:55 AM – 11:55 AM</p>
 
 </div>
 
-<div class="flightBox">
+<div class="flight-box">
 
 <h3>Return</h3>
 
@@ -312,9 +357,7 @@ font-size:30px;
 
 <p>Shanghai → Manila</p>
 
-<p><strong>10:50 AM</strong></p>
-
-<p>Arrival <strong>2:45 PM</strong></p>
+<p>10:50 AM – 2:45 PM</p>
 
 </div>
 
@@ -322,173 +365,200 @@ font-size:30px;
 
 </div>
 
-<div class="section">
-
-<h2 class="title">🎁 Package Includes</h2>
+<div class="card">
 
 <div class="grid">
 
-<div class="card">
+<div>
 
-<h3>Included</h3>
+<h2 class="section-title">✅ Package Includes</h2>
 
 <ul>
-<li>✔ Roundtrip PAL Airfare</li>
+
+<li>✔ Roundtrip Airfare</li>
 <li>✔ Airport Taxes</li>
 <li>✔ 20KG Check-in Baggage</li>
 <li>✔ 5 Nights 4★ Hotel</li>
+<li>✔ Twin Sharing Room</li>
 <li>✔ Daily Breakfast</li>
 <li>✔ 5 Lunches</li>
 <li>✔ 1 Dinner</li>
-<li>✔ Private Coach Transfers</li>
-<li>✔ English Tour Guide</li>
 <li>✔ Entrance Fees</li>
-<li>✔ Beijing–Shanghai Bullet Train</li>
+<li>✔ Private Transfers</li>
+<li>✔ English Guide</li>
 <li>✔ Daily Bottled Water</li>
+<li>✔ Beijing–Shanghai Bullet Train</li>
+
 </ul>
+
+</div>
+
+<div>
+
+<h2 class="section-title">❌ Not Included</h2>
+
+<ul>
+
+<li>✖ Personal Expenses</li>
+<li>✖ Single Supplement ₱19,500</li>
+<li>✖ China Visa ₱3,000</li>
+<li>✖ Travel Insurance</li>
+<li>✖ Tips ₱4,250</li>
+<li>✖ PH Travel Tax ₱1,620</li>
+<li>✖ Disneyland Optional Tour</li>
+
+</ul>
+
+</div>
+
+</div>
 
 </div>
 
 <div class="card">
 
-<h3>Not Included</h3>
-
-<ul>
-<li>✖ China Visa</li>
-<li>✖ Travel Insurance</li>
-<li>✖ Personal Expenses</li>
-<li>✖ Tips (₱4,250)</li>
-<li>✖ Philippine Travel Tax</li>
-<li>✖ Single Supplement</li>
-<li>✖ Shanghai Disneyland</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2 class="title">🗓 6-Day Journey</h2>
+<h2 class="section-title">🗓 6-Day Itinerary</h2>
 
 <div class="timeline">
 
 <div class="day">
+<div class="day-card">
 
-<h3>✈ Day 1 — Manila → Beijing</h3>
+<span class="badge">DAY 1</span>
 
-<small>Dinner</small>
+<h3>✈ Manila → Beijing</h3>
+
+<p><strong>Meals:</strong> Dinner</p>
 
 <ul>
-<li>Arrival in Beijing</li>
-<li>Meet English-speaking guide</li>
-<li>Visit Qianmen Street</li>
-<li>Explore Xianyukou Food Street</li>
+<li>Fly to Beijing</li>
+<li>Meet local guide</li>
+<li>Qianmen Street</li>
+<li>Xianyukou Food Street</li>
 <li>Hotel Check-in</li>
 </ul>
 
 </div>
-
-<div class="day">
-
-<h3>🏯 Day 2 — Great Wall</h3>
-
-<small>Breakfast • Lunch • Dinner</small>
-
-<ul>
-<li>Juyongguan Great Wall</li>
-<li>Wangfujing Walking Street</li>
-<li>Shopping & Free Time</li>
-<li>Return to Hotel</li>
-</ul>
-
 </div>
 
 <div class="day">
+<div class="day-card">
 
-<h3>👑 Day 3 — Imperial Beijing</h3>
+<span class="badge">DAY 2</span>
 
-<small>Breakfast • Lunch • Dinner</small>
+<h3>🏯 Explore Beijing</h3>
+
+<p><strong>Meals:</strong> Breakfast • Lunch • Dinner</p>
+
+<ul>
+<li>Great Wall (Juyongguan)</li>
+<li>Wangfujing Walking Street</li>
+<li>Free Time</li>
+<li>Hotel</li>
+</ul>
+
+</div>
+</div>
+
+<div class="day">
+<div class="day-card">
+
+<span class="badge">DAY 3</span>
+
+<h3>👑 Imperial Beijing</h3>
+
+<p><strong>Meals:</strong> Breakfast • Lunch • Dinner</p>
 
 <ul>
 <li>Tiananmen Square</li>
 <li>Forbidden City</li>
-<li>Water Cube Photo Stop</li>
+<li>Water Cube</li>
 <li>Bird's Nest Stadium</li>
 </ul>
 
 </div>
+</div>
 
 <div class="day">
+<div class="day-card">
 
-<h3>🚄 Day 4 — Beijing → Shanghai</h3>
+<span class="badge">DAY 4</span>
 
-<small>Breakfast • Lunch • Dinner</small>
+<h3>🚄 Beijing → Shanghai</h3>
+
+<p><strong>Meals:</strong> Breakfast • Lunch • Dinner</p>
 
 <ul>
-<li>Bullet Train Experience</li>
+<li>Bullet Train</li>
 <li>Yu Garden</li>
 <li>City God Temple</li>
 <li>Nanjing Road</li>
 <li>The Bund Night View</li>
-<li>Hotel Check-in</li>
 </ul>
 
 </div>
-
-<div class="day">
-
-<h3>🎡 Day 5 — Shanghai Free Day</h3>
-
-<small>Breakfast</small>
-
-<ul>
-<li>Free Time</li>
-<li>Optional Shanghai Disneyland</li>
-<li>Roundtrip Transfers Available</li>
-<li>Return to Hotel</li>
-</ul>
-
 </div>
 
 <div class="day">
+<div class="day-card">
 
-<h3>✈ Day 6 — Shanghai → Manila</h3>
+<span class="badge">DAY 5</span>
 
-<small>Breakfast</small>
+<h3>🎡 Shanghai Free Day</h3>
+
+<p><strong>Meals:</strong> Breakfast</p>
+
+<p>Free at leisure.</p>
+
+<div class="optional">
+
+<b>Optional Tour</b><br><br>
+
+🏰 Shanghai Disneyland<br><br>
+
+USD120 Regular<br>
+
+USD150 Holiday<br><br>
+
+Includes Admission + Transfers + Guide
+
+</div>
+
+</div>
+</div>
+
+<div class="day">
+<div class="day-card">
+
+<span class="badge">DAY 6</span>
+
+<h3>✈ Shanghai → Manila</h3>
 
 <ul>
-<li>Hotel Breakfast</li>
+
+<li>Breakfast</li>
 <li>Free Time</li>
 <li>Airport Transfer</li>
-<li>Fly Back to Manila</li>
+<li>Flight Home</li>
+
 </ul>
 
 </div>
+</div>
+
+</div>
 
 </div>
 
 </div>
 
-<div class="footer">
+<footer class="footer">
 
-<h2>🏮 Experience the Best of China 🏮</h2>
+🐉 <strong>Experience the Wonders of China</strong> 🏮<br><br>
 
-<p>
-The Great Wall • Forbidden City • The Bund • Yu Garden • Bullet Train Experience
-</p>
+Great Wall • Forbidden City • The Bund • Yu Garden • Shanghai Disneyland
 
-<br>
-
-<p class="highlight">
-NO MANDATORY SHOPPING • 4★ HOTELS • ENGLISH GUIDE
-</p>
-
-</div>
-
-</div>
+</footer>
 
 </body>
 </html>
