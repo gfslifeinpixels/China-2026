@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>China Tour Package</title>
+<title>China Tour Package 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,108 +14,102 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Poppins,sans-serif;
 }
 
 body{
 
-font-family:Poppins,sans-serif;
 background:
-linear-gradient(rgba(80,0,0,.92),rgba(25,0,0,.96)),
-url('https://images.unsplash.com/photo-1547981609-4b6bf67db6e2?auto=format&fit=crop&w=1800&q=80');
+linear-gradient(rgba(80,0,0,.88),rgba(20,0,0,.94)),
+url("https://images.unsplash.com/photo-1547981609-4b6bf67db7ae?auto=format&fit=crop&w=1800&q=80");
 background-size:cover;
 background-attachment:fixed;
 color:white;
 
 }
 
-header{
+.hero{
 
-position:relative;
-padding:70px 20px;
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
 text-align:center;
+position:relative;
+
 overflow:hidden;
-background:
-linear-gradient(180deg,#8b0000,#510000);
 
 }
 
-.dragon{
+.hero:before{
 
-font-size:130px;
-animation:float 4s ease-in-out infinite;
-display:block;
-
-}
-
-@keyframes float{
-
-50%{
-transform:translateY(-12px);
-}
+content:"🐉";
+font-size:260px;
+position:absolute;
+opacity:.15;
+animation:dragon 10s ease-in-out infinite;
 
 }
 
-header h1{
+@keyframes dragon{
 
-font-family:Cinzel,serif;
-font-size:65px;
-color:#FFD700;
+0%{transform:translateX(-250px) rotate(-10deg);}
+50%{transform:translateX(250px) rotate(8deg);}
+100%{transform:translateX(-250px) rotate(-10deg);}
+
+}
+
+.hero h1{
+
+font-size:70px;
+font-family:Cinzel;
+color:#FFD54F;
 text-shadow:0 0 25px gold;
 
 }
 
-header h2{
+.hero h2{
 
-font-size:26px;
-font-weight:300;
 margin-top:10px;
+font-size:28px;
 
 }
 
 .price{
 
-margin-top:30px;
+margin-top:35px;
+font-size:42px;
+font-weight:bold;
+background:#FFD54F;
 display:inline-block;
-padding:18px 40px;
-background:#FFD700;
-color:#700000;
-border-radius:60px;
-font-size:34px;
-font-weight:700;
-box-shadow:0 0 25px gold;
+padding:15px 35px;
+color:#8B0000;
+border-radius:50px;
+
+box-shadow:0 0 30px gold;
 
 }
 
-.travel{
+.section{
 
-margin-top:20px;
-font-size:22px;
-
-}
-
-.container{
-
-width:95%;
-max-width:1400px;
-margin:auto;
-padding:50px 0;
+padding:70px 8%;
 
 }
 
-.section-title{
+.section h3{
 
-font-size:36px;
-margin-bottom:25px;
-text-align:center;
-color:#FFD700;
+font-size:38px;
+color:#FFD54F;
+margin-bottom:30px;
 
 }
 
 .grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
 
 }
 
@@ -123,77 +117,78 @@ gap:25px;
 
 background:rgba(255,255,255,.08);
 backdrop-filter:blur(15px);
-padding:25px;
+
+padding:30px;
 border-radius:20px;
-border:2px solid rgba(255,215,0,.4);
-transition:.4s;
-cursor:pointer;
+border:1px solid rgba(255,255,255,.2);
+
+transition:.35s;
 
 }
 
 .card:hover{
 
 transform:translateY(-8px) scale(1.03);
-box-shadow:0 15px 30px rgba(255,215,0,.35);
 
 }
 
-.card h3{
-
-color:#FFD700;
-margin-bottom:15px;
-
-}
-
-.card ul{
+ul{
 
 padding-left:18px;
 
 }
 
-.card li{
+li{
 
-margin:8px 0;
+margin:10px 0;
 
 }
 
 .days{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-margin-top:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 
 }
 
 .day{
 
-background:linear-gradient(135deg,#9b0000,#c40000);
-padding:35px;
-border-radius:20px;
-text-align:center;
+background:linear-gradient(135deg,#D32F2F,#7B0000);
+
+padding:30px;
+
+border-radius:18px;
+
 cursor:pointer;
-transition:.35s;
-border:2px solid gold;
+
+transition:.3s;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.4);
 
 }
 
 .day:hover{
 
-transform:scale(1.07);
+transform:translateY(-10px);
 
 }
 
-.day h2{
+.day h4{
 
-font-size:42px;
-color:gold;
+font-size:28px;
+
+margin-bottom:10px;
 
 }
 
-.day p{
+.day span{
 
-margin-top:10px;
+font-size:18px;
+
+color:#FFD54F;
 
 }
 
@@ -204,155 +199,182 @@ left:0;
 top:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.8);
+background:rgba(0,0,0,.82);
+
 display:none;
+
 justify-content:center;
 align-items:center;
+
 padding:20px;
-z-index:999;
+
+z-index:1000;
 
 }
 
 .modal-content{
 
 background:#fff8ef;
-color:#333;
-width:750px;
+color:#222;
+width:850px;
 max-width:95%;
-padding:35px;
 border-radius:20px;
+padding:40px;
 position:relative;
-animation:pop .3s;
+
+animation:pop .35s;
 
 }
 
 @keyframes pop{
 
-from{
-transform:scale(.7);
-opacity:0;
-}
-
-to{
-transform:scale(1);
-opacity:1;
-}
+from{transform:scale(.7);opacity:0;}
+to{transform:scale(1);opacity:1;}
 
 }
 
 .close{
 
 position:absolute;
-right:18px;
-top:10px;
-font-size:30px;
+right:25px;
+top:20px;
+
+font-size:32px;
 cursor:pointer;
 
 }
 
 .modal h2{
 
-color:#b30000;
+color:#B71C1C;
+
 margin-bottom:15px;
 
 }
 
 .modal ul{
 
-padding-left:20px;
-
-}
-
-.modal li{
-
-margin:10px 0;
+margin-top:20px;
 
 }
 
 footer{
 
-padding:50px;
+padding:40px;
 text-align:center;
-color:#ddd;
+font-size:18px;
+background:#5D0000;
+
+}
+
+button{
+
+background:#B71C1C;
+border:none;
+padding:15px 30px;
+color:white;
+font-size:18px;
+border-radius:40px;
+cursor:pointer;
+margin-top:30px;
+
+}
+
+button:hover{
+
+background:#8B0000;
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
+<section class="hero">
 
-<div class="dragon">🐉</div>
+<div>
 
-<h1>CHINA TOUR PACKAGE</h1>
+<h1>🇨🇳 CHINA TOUR PACKAGE 🇨🇳</h1>
 
-<h2>Beijing • Shanghai • 6 Days 5 Nights</h2>
+<h2>Beijing • Shanghai<br>6 Days 5 Nights</h2>
 
-<div class="price">₱65,998</div>
+<h2>No Mandatory Shopping</h2>
 
-<div class="travel">
-Travel Date • December 2026
-<br>
-✈ via Philippine Airlines
+<div class="price">
+₱65,998 / PERSON
 </div>
 
-</header>
+<p style="margin-top:20px;font-size:24px;">
+Travel Date<br>
+<strong>December 2026</strong>
+</p>
 
-<div class="container">
+<button onclick="document.getElementById('itinerary').scrollIntoView({behavior:'smooth'})">
+View Itinerary
+</button>
 
-<h2 class="section-title">✈ Flight Details</h2>
+</div>
+
+</section>
+
+<section class="section">
+
+<h3>✈ Flight Details</h3>
 
 <div class="grid">
 
 <div class="card">
 
-<h3>Outbound</h3>
+<h2>Outbound</h2>
 
 <p><strong>PR358</strong></p>
 
 <p>Manila → Beijing</p>
 
-<p>06:55 - 11:55</p>
+<h2>06:55 - 11:55</h2>
 
 </div>
 
 <div class="card">
 
-<h3>Return</h3>
+<h2>Return</h2>
 
 <p><strong>PR339</strong></p>
 
 <p>Shanghai → Manila</p>
 
-<p>10:50 - 14:45</p>
+<h2>10:50 - 14:45</h2>
 
 </div>
 
 </div>
 
-<br><br>
+</section>
 
-<h2 class="section-title">Package</h2>
+<section class="section">
 
 <div class="grid">
 
 <div class="card">
 
-<h3>✅ Includes</h3>
+<h3>✅ Package Includes</h3>
 
 <ul>
 
-<li>Roundtrip Airfare</li>
-<li>20KG Check-in Baggage</li>
+<li>Roundtrip PAL Airfare</li>
+<li>Airport Taxes</li>
+<li>20KG Baggage</li>
 <li>5 Nights 4★ Hotel</li>
 <li>Daily Breakfast</li>
-<li>Meals per itinerary</li>
-<li>Entrance Fees</li>
-<li>Private Transfers</li>
+<li>5 Lunches</li>
+<li>1 Dinner</li>
+<li>Private Coach</li>
 <li>English Guide</li>
-<li>Bullet Train Beijing→Shanghai</li>
+<li>Entrance Fees</li>
+<li>Daily Water</li>
+<li>Bullet Train Beijing → Shanghai</li>
 
 </ul>
 
@@ -360,15 +382,16 @@ Travel Date • December 2026
 
 <div class="card">
 
-<h3>❌ Excludes</h3>
+<h3>❌ Exclusions</h3>
 
 <ul>
 
-<li>Visa PHP3,000</li>
-<li>Travel Insurance</li>
-<li>Travel Tax</li>
-<li>Tips PHP4,250</li>
+<li>Visa PHP 3,000</li>
+<li>Tips PHP 4,250</li>
+<li>Travel Tax PHP 1,620</li>
+<li>Insurance</li>
 <li>Personal Expenses</li>
+<li>Single Supplement PHP19,500</li>
 <li>Disneyland Optional Tour</li>
 
 </ul>
@@ -377,51 +400,53 @@ Travel Date • December 2026
 
 </div>
 
-<br><br>
+</section>
 
-<h2 class="section-title">🗓 Click a Day</h2>
+<section class="section" id="itinerary">
+
+<h3>🗓 Itinerary</h3>
 
 <div class="days">
 
-<div class="day" onclick="showDay(1)">
-<h2>1</h2>
-<p>Arrival Beijing</p>
+<div class="day" onclick="openDay(1)">
+<h4>✈ Day 1</h4>
+<span>Manila → Beijing</span>
 </div>
 
-<div class="day" onclick="showDay(2)">
-<h2>2</h2>
-<p>Great Wall</p>
+<div class="day" onclick="openDay(2)">
+<h4>🏯 Day 2</h4>
+<span>Great Wall</span>
 </div>
 
-<div class="day" onclick="showDay(3)">
-<h2>3</h2>
-<p>Forbidden City</p>
+<div class="day" onclick="openDay(3)">
+<h4>👑 Day 3</h4>
+<span>Forbidden City</span>
 </div>
 
-<div class="day" onclick="showDay(4)">
-<h2>4</h2>
-<p>Shanghai</p>
+<div class="day" onclick="openDay(4)">
+<h4>🚄 Day 4</h4>
+<span>Shanghai</span>
 </div>
 
-<div class="day" onclick="showDay(5)">
-<h2>5</h2>
-<p>Disney Optional</p>
+<div class="day" onclick="openDay(5)">
+<h4>🎡 Day 5</h4>
+<span>Free Day</span>
 </div>
 
-<div class="day" onclick="showDay(6)">
-<h2>6</h2>
-<p>Back Home</p>
-</div>
-
+<div class="day" onclick="openDay(6)">
+<h4>✈ Day 6</h4>
+<span>Home</span>
 </div>
 
 </div>
+
+</section>
 
 <div class="modal" id="modal">
 
 <div class="modal-content">
 
-<span class="close" onclick="closeModal()">✖</span>
+<div class="close" onclick="closeModal()">✕</div>
 
 <div id="content"></div>
 
@@ -431,111 +456,99 @@ Travel Date • December 2026
 
 <footer>
 
-🐉 NO MANDATORY SHOPPING • Beijing & Shanghai Adventure 🏮
+🐉 Beijing • Shanghai • December 2026 • PAL Airlines
 
 </footer>
 
 <script>
 
-const itinerary={
+const days={
 
 1:{
-title:"✈ Day 1 - Manila → Beijing",
-body:`
-<b>Meals:</b> Dinner
+title:"✈ Day 1 – Manila → Beijing",
+html:`
+<p><b>Meals:</b> Dinner</p>
 <ul>
 <li>Fly to Beijing</li>
-<li>Meet local English guide</li>
-<li>Visit Qianmen Street</li>
+<li>Meet local guide</li>
+<li>Qianmen Street</li>
 <li>Xianyukou Food Street</li>
-<li>Transfer to Hotel</li>
+<li>Hotel Check-in</li>
 </ul>
-🏨 Overnight in Beijing`
+`
 },
 
 2:{
-title:"🏯 Day 2 - Beijing",
-body:`
-<b>Meals:</b> Breakfast • Lunch • Dinner
+title:"🏯 Day 2 – Beijing",
+html:`
+<p><b>Meals:</b> Breakfast • Lunch • Dinner</p>
 <ul>
+<li>Breakfast</li>
 <li>Juyongguan Great Wall</li>
-<li>Wangfujing Walking Street</li>
-<li>Free Time</li>
+<li>Wangfujing Street</li>
 <li>Return Hotel</li>
 </ul>
-🏨 Beijing`
+`
 },
 
 3:{
-title:"👑 Day 3",
-body:`
+title:"👑 Day 3 – Beijing",
+html:`
+<p><b>Meals:</b> Breakfast • Lunch • Dinner</p>
 <ul>
 <li>Tiananmen Square</li>
 <li>Forbidden City</li>
 <li>Water Cube</li>
-<li>Bird's Nest Stadium</li>
+<li>Bird Nest Stadium</li>
 </ul>
-🏨 Beijing`
+`
 },
 
 4:{
-title:"🚄 Day 4",
-body:`
+title:"🚄 Day 4 – Shanghai",
+html:`
+<p><b>Meals:</b> Breakfast • Lunch • Dinner</p>
 <ul>
-<li>Bullet Train to Shanghai</li>
+<li>Bullet Train</li>
 <li>Yu Garden</li>
 <li>City God Temple</li>
 <li>Nanjing Road</li>
-<li>The Bund Night View</li>
+<li>The Bund</li>
 </ul>
-🏨 Shanghai`
+`
 },
 
 5:{
-title:"🎡 Day 5",
-body:`
-Free Day
-
-Optional Disneyland
-
-USD120 Regular
-
-USD150 Holiday
-
-Includes:
-
+title:"🎡 Day 5 – Shanghai",
+html:`
+<p><b>Meals:</b> Breakfast</p>
 <ul>
-
-<li>Admission Ticket</li>
-<li>Transfers</li>
-<li>Guide Assistance</li>
-
+<li>Free Day</li>
+<li>Optional Shanghai Disneyland</li>
+<li>USD120 Regular</li>
+<li>USD150 Holiday</li>
 </ul>
-
-🏨 Shanghai`
+`
 },
 
 6:{
-title:"✈ Day 6",
-body:`
+title:"✈ Day 6 – Manila",
+html:`
 <ul>
-
 <li>Breakfast</li>
 <li>Free Time</li>
-<li>Airport Transfer</li>
+<li>Transfer Airport</li>
 <li>Flight to Manila</li>
-
 </ul>
-
-❤️ Thank you for traveling!`
+`
 }
 
-};
+}
 
-function showDay(day){
+function openDay(i){
 
 document.getElementById("content").innerHTML=
-"<h2>"+itinerary[day].title+"</h2><br>"+itinerary[day].body;
+"<h2>"+days[i].title+"</h2>"+days[i].html;
 
 document.getElementById("modal").style.display="flex";
 
@@ -549,8 +562,7 @@ document.getElementById("modal").style.display="none";
 
 window.onclick=function(e){
 
-if(e.target==document.getElementById("modal"))
-
+if(e.target.id==="modal")
 closeModal();
 
 }
